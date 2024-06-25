@@ -1,0 +1,33 @@
+.notfound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    h4{
+        font-size: 30px;
+        color: #222222;
+        font-weight: 700;
+    }
+    p{
+        color: #222222;
+        font-size: 20px;
+    }
+
+    a{
+        background-color: #ECECEC;
+        padding: 20px 60px;
+        color: #222222;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 5px;
+        transition: all .3s;
+
+        &:hover{
+            background-color: #FABE17;
+            color: white;
+        }
+
+    }
+}

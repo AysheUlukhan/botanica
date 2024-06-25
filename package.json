@@ -1,0 +1,47 @@
+{
+  "name": "botanica",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.6",
+    "antd": "^5.17.3",
+    "bootstrap": "^5.3.3",
+    "framer-motion": "^11.1.9",
+    "i18next": "^23.11.5",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
+    "react": "^18.2.0",
+    "react-animated-router": "^1.2.4",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-i18next": "^14.1.2",
+    "react-icons": "^5.2.1",
+    "react-image-magnify": "^2.7.4",
+    "react-medium-image-zoom": "^5.2.4",
+    "react-router-dom": "^6.23.0",
+    "react-slugify": "^3.0.3",
+    "react-toastify": "^10.0.5",
+    "react-use-cart": "^1.13.0",
+    "react-use-wishlist": "^1.0.1",
+    "sass": "^1.77.0",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "vite": "^5.2.0"
+  }
+}

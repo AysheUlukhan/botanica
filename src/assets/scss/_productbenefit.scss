@@ -1,0 +1,165 @@
+.product_benefit {
+    .pb_head {
+        h6 {
+            color: #7A3E1C;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        h5 {
+            color: #222222;
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        p {
+            max-width: 600px;
+            display: inline-block;
+        }
+    }
+
+    .benefit-card {
+        padding-top: 70px;
+        p {
+            color: #7A3E1C;
+            font-size: 17px;
+            font-weight: 700;
+            max-width: 200px;
+            display: inline-block;
+            text-align: right;
+        }
+
+
+        .count-wrapper {
+            background-color: #FCF5E5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            // min-width: 90px;
+            position: relative;
+            width: 100px;
+
+            span {
+                color: #5b2800;
+                font-weight: 700;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -24.7px;
+                width: 0;
+                left: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: 25px solid #FCF5E5;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -24px;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-top: 25px solid #FCF5E5;
+            }
+
+        }
+    }
+}
+
+@media (max-width:540px) {
+    .product_benefit{
+        .benefit-img{
+            padding-top: 40px;
+            img{
+                width: 300px;
+            }
+        }
+    }
+}
+
+
+
+.dark{
+    .product_benefit {
+        .pb_head {
+            h6 {
+                color: #FABE17;
+                font-size: 18px;
+                font-weight: 600;
+            }
+    
+            h5 {
+                color: #A2A8B7;
+                font-size: 35px;
+                font-weight: 700;
+            }
+    
+            p {
+                max-width: 600px;
+                display: inline-block;
+                color: #A2A8B7;
+            }
+        }
+    
+        .benefit-card {
+            padding-top: 70px;
+            p {
+                color: #FABE17;
+                font-size: 17px;
+                font-weight: 700;
+                max-width: 200px;
+                display: inline-block;
+                text-align: right;
+            }
+    
+    
+            .count-wrapper {
+                background-color: #dadee8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                // min-width: 90px;
+                position: relative;
+                width: 100px;
+    
+                span {
+                    color: #0F0F0F;
+                    font-weight: 700;
+                }
+    
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -24.7px;
+                    width: 0;
+                    left: 0;
+                    height: 0;
+                    border-left: 50px solid transparent;
+                    border-right: 50px solid transparent;
+                    border-bottom: 25px solid #dadee8;
+                }
+    
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -24px;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border-left: 50px solid transparent;
+                    border-right: 50px solid transparent;
+                    border-top: 25px solid #dadee8;
+                }
+    
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.home_choose {
+    .choose_head {
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #5B2800;
+        }
+
+        h5 {
+            color: #222222;
+            font-size: 35px;
+        }
+    }
+
+    .choose_card {
+        .content_widget {
+            margin: 0 20px 30px 25px;
+            min-height: 312px;
+            padding: 50px 30px 80px 50px;
+            background: #fff;
+            border-bottom-right-radius: 130px;
+            border-top-left-radius: 130px;
+            box-shadow: 13px 15px 30px 0 #0003;
+            margin: 0 20px 30px 50px;
+            min-height: 348px;
+            padding: 68px 50px 100px 60px;
+            position: relative;
+            text-align: left;
+            transition: .3s;
+
+            &::before {
+                background-color: #F9BD17;
+                border-bottom-right-radius: 130px;
+                border-top-left-radius: 130px;
+                content: "";
+                height: 100%;
+                position: absolute;
+                right: -20px;
+                top: -20px;
+                width: 100%;
+                z-index: -1;
+            }
+
+            .content-decs {
+                &::after {
+                    border: 2px dashed #000;
+                    border-bottom-right-radius: 130px;
+                    border-top-left-radius: 130px;
+                    content: "";
+                    height: calc(100% + 40px);
+                    left: -30px;
+                    position: absolute;
+                    top: -10px;
+                    width: calc(100% + 40px);
+                    z-index: -1;
+                }
+            }
+
+            .content-top {
+                .image_box_top {
+                    figure {
+                        height: 90px;
+                        left: 5px;
+                        padding: 20px;
+                        width: 90px;
+                        align-items: center;
+                        background: #fff;
+                        border: 1px solid #F9BD17;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        margin: 0 0 0 -40px;
+                        position: absolute;
+                        top: -20px;
+
+                        img{
+                            height: auto;
+                            max-width: 100%;
+                            border: none;
+                            border-radius: 0;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

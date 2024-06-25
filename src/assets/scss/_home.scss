@@ -1,0 +1,128 @@
+.home {
+
+
+    .hero {
+        background-image: url('../../assets/images/slide4-2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 110vh;
+        padding-top: 250px;
+
+        h5 {
+            font-size: 30px;
+        }
+
+        h3 {
+            color: #151418;
+            font-size: 60px;
+            line-height: 1.2em;
+        }
+
+        a {
+            padding: 20px 50px;
+            background-color: #FFFFFF;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 700;
+            color: #5B2800;
+        }
+
+    }
+
+}
+
+@media (max-width:1400px) {
+    .hero {
+        height: 70vh !important;
+
+        h3 {
+            font-size: 40px !important;
+        }
+
+    }
+}
+
+
+@media (max-width:992px) {
+    .hero {
+        height: 47vh !important;
+        padding-top: 50px !important;
+
+        h3 {
+            font-size: 30px !important;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .hero {
+        height: 70vh !important;
+        padding-top: 50px !important;
+
+        h3 {
+            font-size: 30px !important;
+        }
+
+        .hero_content {
+            text-align: center;
+        }
+
+        .images {
+            padding-top: 30px;
+
+            img {
+                width: 500px !important;
+            }
+        }
+
+    }
+}
+
+@media (max-width:540px) {
+    .hero {
+        h3 {
+            font-size: 40px !important;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+
+            img {
+                width: 300px !important;
+            }
+        }
+    }
+}
+
+
+.dark {
+    .hero {
+        background-image: url('https://img.freepik.com/premium-photo/honey-drips-from-spoon-into-jar-black-background_222185-1240.jpg');
+        // background-image: url('https://t3.ftcdn.net/jpg/05/56/92/98/360_F_556929856_6CS7curJUR2Nc0rKXbtfuefyRTQQx4b0.jpg');
+        //    background-image: url('https://img.freepik.com/premium-photo/golden-honey-drips-from-spoon-black-background_222185-1241.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        height: 100vh;
+        width: 100%;
+
+        h5 {
+            color: #FABE17;
+        }
+
+        h3{
+            color: #FABE17;
+        }
+
+        a{
+            background-color: #FABE17;
+            // box-shadow: 0 0 5px #fff700, 0 0 5px #fff700, 0 0 5px #fff700, 0 0 5px #fff700, 0 0 10px #fff700, 0 0 10px #fff700, 0 0 30px #fff700;
+            box-shadow: 0 0 5px #FABE17, 0 0 10px #FABE17, 0 0 15px #FABE17;
+        }
+    }
+}

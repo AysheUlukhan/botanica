@@ -1,0 +1,139 @@
+.feature-category {
+    background-image: url('../images/slide4-2.jpg');
+    height: 107vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 260px 0px 0px 0px;
+
+
+
+    .fc-head {
+        text-align: center;
+        padding-top: 50px;
+
+        h6 {
+            color: #5b2800;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        h5 {
+            color: #222222;
+            font-size: 40px;
+        }
+
+    }
+
+    .cards {
+        border: none;
+        
+        .card-head {
+            position: relative;
+            text-align: center; 
+
+            &::before {
+                background: url('../images/dotted-category.png') 50% no-repeat;
+                background-position: bottom;
+                background-size: contain;
+                content: "";
+                height: 102%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 9;
+            }
+
+            img {
+                // -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+                clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+                height: auto;
+                max-width: 100%;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                display: inline-block !important;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .feature-category {
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 140px 0px 0px 0px;
+    }
+}
+
+.dark{
+    .feature-category {
+        background-image: url('https://images.unsplash.com/photo-1601529122845-b32005ea9ae7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        height: 107vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 260px 0px 0px 0px;
+    
+    
+    
+        .fc-head {
+            text-align: center;
+            padding-top: 50px;
+    
+            h6 {
+                color: #FABE17;
+                font-size: 18px;
+                font-weight: 700;
+            }
+    
+            h5 {
+                color: #A2A8B7;
+                font-size: 40px;
+            }
+    
+        }
+    
+        .cards {
+            border: none;
+            
+            .card-head {
+                position: relative;
+                text-align: center; 
+    
+                &::before {
+                    background: url('../images/dotted-category.png') 50% no-repeat;
+                    background-position: bottom;
+                    background-size: contain;
+                    content: "";
+                    height: 102%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    z-index: 9;
+                }
+    
+                img {
+                    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+                    height: auto;
+                    max-width: 100%;
+                    border: none;
+                    border-radius: 0;
+                    box-shadow: none;
+                    display: inline-block !important;
+                    vertical-align: middle;
+                }
+            }
+
+            .cards-content{
+                color: #A2A8B7;
+            }
+        }
+    }
+    
+}

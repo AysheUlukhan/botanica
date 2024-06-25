@@ -1,0 +1,239 @@
+.product_card {
+
+    .card {
+        border: none !important;
+        height: 560px !important;
+        padding: 20px;
+        border-radius: 20px;
+        // position: relative;
+
+        .wrapper {
+
+            .wishlist {
+                color: #C3C3C3;
+                font-size: 25px;
+                transition: all .3s;
+
+                &:hover{
+                    color: #5B2800;
+                }
+            }
+
+            height: 450px;
+            // width: 400px !important;
+
+            .img-area {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    height: 370px;
+                    width: 100%;
+                    transition: opacity 0.5s ease-in-out;
+                }
+
+                // .img-front:hover {
+                //     opacity: 0;
+                //     cursor: pointer;
+                // }
+
+            }
+
+
+        }
+
+        
+
+        .card_content {
+            .card_stars {
+                color: #C3C3C3;
+
+                sup {
+                    color: #5E5E5E;
+                }
+            }
+
+            a{
+                color: #222222;
+                font-size: 17px;
+                font-weight: 600;
+
+                &:hover{
+                    color: #5B2800;
+                }
+            }
+
+            span{
+                color: #5B2800;
+                font-size: 15px;
+                font-weight: 700;
+            }
+
+            .card-foot {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+
+                .hidden-icons {
+                    opacity: 1;
+                }
+
+                
+
+                .icons {
+                    background-color: #ECECEC;
+                    padding: 13px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #5B2800;
+                    font-size: 18px;
+                    transition: all .5s ease;
+
+                    &:hover{
+                        background-color: #5B2800;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+
+
+        &:hover {
+            cursor: pointer;
+
+            .img-front {
+                opacity: 0;
+            }
+
+
+            .hidden-icons {
+                opacity: 1 !important;
+            }
+
+        }
+
+
+    }
+}
+
+.dark{
+    .product_card {
+
+        .card {
+            border: none !important;
+            height: 560px !important;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #292929;
+            .wrapper {
+    
+                .wishlist {
+                    color: #C3C3C3;
+                    font-size: 25px;
+                    transition: all .3s;
+    
+                    &:hover{
+                        color: #FABE17;
+                    }
+                }
+    
+                height: 450px;
+    
+                .img-area {
+                    position: relative;
+    
+                    img {
+                        position: absolute;
+                        left: 0;
+                        height: 370px;
+                        width: 100%;
+                        transition: opacity 0.5s ease-in-out;
+                    }
+    
+    
+                }
+    
+    
+            }
+    
+            
+    
+            .card_content {
+                .card_stars {
+                    color: #C3C3C3;
+    
+                    sup {
+                        color: #5E5E5E;
+                    }
+                }
+    
+                a{
+                    color: #C3C3C3;
+                    font-size: 17px;
+                    font-weight: 600;
+    
+                    &:hover{
+                        color: #FABE17;
+                    }
+                }
+    
+                span{
+                    color: #FABE17;
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+    
+                .card-foot {
+                    position: absolute;
+                    right: 20px;
+                    bottom: 20px;
+    
+                    .hidden-icons {
+                        opacity: 1;
+                    }
+    
+                    
+    
+                    .icons {
+                        background-color: #FABE17;
+                        padding: 13px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #292929;
+                        font-size: 18px;
+                        transition: all .5s ease;
+    
+                        &:hover{
+                            background-color: #5B2800;
+                            color: white;
+                        }
+                    }
+                }
+    
+            }
+    
+    
+            &:hover {
+                cursor: pointer;
+    
+                .img-front {
+                    opacity: 0;
+                }
+    
+    
+                .hidden-icons {
+                    opacity: 1 !important;
+                }
+    
+            }
+    
+    
+        }
+    }
+}

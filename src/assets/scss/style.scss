@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import 'header';
+@import 'footer';
+@import 'home';
+@import 'authCertification';
+@import 'beSocial';
+@import 'featureCategory';
+@import 'brand';
+@import 'gototop';
+@import 'latestnews';
+@import 'homeourproduct';
+@import 'productbenefit';
+@import 'whychoose';
+@import 'singleProduct';
+@import 'about';
+@import 'breadcrumb';
+@import 'contact';
+@import 'notfound';
+@import 'faq';
+@import 'blogCard';
+@import 'blog';
+@import 'blogDetail';
+@import 'login';
+@import 'register';
+@import 'forgotPass';
+@import 'shop';
+@import 'shopDetail';
+@import 'wishlist';
+@import 'basket';
+
+* {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #E3AC15;
+  -webkit-box-shadow: inset 0 0 6px white;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: white;
+}
+
+
+
+.ant-select-item-option-active {
+  color: white !important;
+  background-color: #5B2800 !important;
+  &:focus{
+    background-color: #5B2800;
+  }
+}
+
+.ant-select-item-option-selected{
+  background-color: #5B2800;
+}
+
+
+:where(.css-dev-only-do-not-override-17seli4).ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: white;
+  background-color: #5B2800;
+}
+
+.ant-select-focused:where(.css-dev-only-do-not-override-17seli4).ant-select-outlined:not(.snt-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector{
+  // border-color: white !important;
+  // box-shadow: white !important;
+  // outline: 0;
+}
+
+
+body{
+  .dark{
+    background-color: #0F0F0F !important;
+    color: white !important;
+  }
+}

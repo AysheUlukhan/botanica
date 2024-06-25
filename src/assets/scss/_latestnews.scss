@@ -1,0 +1,47 @@
+.latest-news {
+    margin-top: 300px;
+
+    .lnews-head {
+        text-align: center;
+
+        h6 {
+            color: #5E2900;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        h5 {
+            color: #222222;
+            font-size: 35px;
+        }
+    }
+
+}
+
+@media (max-width:540px) {
+    .latest-news{
+        margin-top: 500px;
+    }
+}
+
+.dark{
+    .latest-news {
+        margin-top: 300px;
+    
+        .lnews-head {
+            text-align: center;
+    
+            h6 {
+                color: #FABE17;
+                font-size: 18px;
+                font-weight: 700;
+            }
+    
+            h5 {
+                color: #A2A8B7;
+                font-size: 35px;
+            }
+        }
+    
+    }
+}

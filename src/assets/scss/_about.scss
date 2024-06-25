@@ -1,0 +1,47 @@
+.about{
+    .banner{
+        background-image: url('../images/breadcrumb.webp');
+        padding: 250px 0 100px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-img{
+        border-radius: 30px;
+    }
+
+    .about-quote{
+        margin-top: 70px;
+        background-color: #F1F1F1;
+        padding: 40px;
+        border-radius: 30px;
+
+        p{
+            font-size: 20px;
+        }
+
+        span{
+            font-size: 13px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .about{
+        .banner{
+            padding: 100px 0 100px 0 !important;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .about-quote{
+        flex-direction: column;
+    }
+}

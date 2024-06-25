@@ -1,0 +1,121 @@
+.basket {
+    .banner {
+        background-image: url('../images/breadcrumb.webp');
+        padding: 250px 0 100px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quantity_btn {
+        background-color: #F2F2F2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 25px;
+
+        button {
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    .lg-table{
+        border: 1px solid #F2F2F2;
+    }
+
+    table {
+        border-radius: 16px;
+
+        .table_head {
+            background-color: #F2F2F2;
+            border-radius: 16px !important;
+            padding: 10px 0 !important;
+            height: 50px;
+
+            th{
+                color: #222222;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .cart_total{
+
+        .cart_total_head{
+            h5{
+                color: #222222;
+                font-weight: 700;
+                font-size: 18px;
+            }
+            border: 1px solid #F2F2F2;
+            padding: 15px 0 15px 25px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+        border-radius: 16px;
+
+        .cart_total_content{
+            background-color: #F2F2F2;
+            padding: 25px;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+
+            p{
+                font-weight: 600;
+                color: #222222;
+            }
+
+            span{
+                color: #222222;
+            }
+
+            .pickup{
+                color: #434343;
+                font-size: 14px;
+            }
+
+            .total_price{
+                font-size: 20px;
+                color: #7A3E1C; 
+                font-weight: 600;
+            }
+
+            a{
+                background-color: #7A3E1C;
+                display: block;
+                padding: 15px 0;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 13px;
+                color: white;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+    .trash_btn {
+        cursor: pointer;
+    }
+
+    .sm_basket_card{
+        .card_head{
+            font-weight: 600;
+            font-size: 14px;
+            color: #222222;
+        }
+
+        span{
+            color: #222222;
+            font-weight: 600;
+        }
+    }
+
+
+}
