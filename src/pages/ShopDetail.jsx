@@ -21,10 +21,12 @@ import {
     Autoplay,
 } from "swiper/modules";
 import SingleProduct from '../components/SingleProduct';
+import { useSelector } from 'react-redux';
 
 const ShopDetail = () => {
     const { slug } = useParams();
-    const shopDetails = shopData.find(p => slugify(p.title) === slug);
+    const data = useSelector(p => p);
+    const shopDetails = data.find(p => slugify(p.title) === slug);
 
     const breadcrumbItems = [
         { text: 'Home', link: '/' },
@@ -52,7 +54,7 @@ const ShopDetail = () => {
         }
     };
 
-    const relatedProducts = shopData.filter(item => item.category === shopDetails.category && item.id !== shopDetails.id);
+    const relatedProducts = data.filter(item => item.category === shopDetails.category && item.id !== shopDetails.id);
 
     return (
         <div className='shop_detail'>
@@ -77,10 +79,10 @@ const ShopDetail = () => {
                                     smallImage: {
                                         alt: 'Wristwatch by Ted Baker London',
                                         isFluidWidth: true,
-                                        src: shopDetails.front_img
+                                        src: shopDetails.frontImg
                                     },
                                     largeImage: {
-                                        src: shopDetails.front_img,
+                                        src: shopDetails.frontImg,
                                         width: 1129,
                                         height: 750
                                     }

@@ -1,4 +1,11 @@
 .product_benefit {
+    position: relative;
+
+    .bee_icon{
+        position: absolute;
+        right: 40px;
+        animation: animate 1.5s infinite ease alternate;
+    }
     .pb_head {
         h6 {
             color: #7A3E1C;
@@ -161,5 +168,12 @@
     
             }
         }
+    }
+}
+
+
+@keyframes animate {
+    to{
+        transform: translateY(30px);
     }
 }

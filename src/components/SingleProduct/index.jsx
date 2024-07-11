@@ -9,9 +9,10 @@ import { Link, NavLink } from 'react-router-dom';
 import slugify from 'react-slugify';
 import { useCart } from 'react-use-cart';
 import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
 
-const SingleProduct = ({shopData}) => {
-  const { addWishlistItem } = useWishlist();  
+const SingleProduct = ({ shopData }) => {
+  const { addWishlistItem } = useWishlist();
   const { addItem } = useCart();
 
   const handleAddToCart = (item) => {
@@ -20,52 +21,55 @@ const SingleProduct = ({shopData}) => {
   };
 
   return (
-    <div className="pt-5 product_card">
-      <div className="card">
-        <div className="wrapper">
-          <div className='d-flex justify-content-end'>
-            <Link to={'/wishlist'} onClick={() => addWishlistItem(shopData)}><IoHeartSharp className='wishlist' /></Link>
-          </div>
-          <figure>
-            <div className='img-area'>
-              <img src={shopData?.front_img} alt="" className='img-back' />
-              <img src={shopData?.back_img} alt="" className='img-front' />
+    <>
+      <div className="pt-4 product_card">
+        <div className="card">
+          <div className="wrapper">
+            <div className='d-flex justify-content-end'>
+              <Link to={'/wishlist'} onClick={() => addWishlistItem(shopData)}><IoHeartSharp className='wishlist' /></Link>
             </div>
-          </figure>
-        </div>
-        <div className='card_content'>
-          <div>
-            <div className='card_stars'>
-              <IoStarSharp />
-              <IoStarSharp />
-              <IoStarSharp />
-              <IoStarSharp />
-              <IoStarSharp /> <sup>(0)</sup>
-            </div>
-            <NavLink to={`/shop/${slugify(shopData.title)}`}>{shopData?.title}</NavLink>
+            <figure>
+              <div className='img-area'>
+                <img src={shopData.frontImg} alt="" className='img-back' />
+                <img src={shopData.backImg} alt="" className='img-front' />
+              </div>
+            </figure>
           </div>
-          <div>
-            <span>${shopData?.price}</span>
+          <div className='card_content'>
+            <div>
+              <div className='card_stars'>
+                <IoStarSharp />
+                <IoStarSharp />
+                <IoStarSharp />
+                <IoStarSharp />
+                <IoStarSharp /> <sup>(0)</sup>
+              </div>
+              <NavLink to={`/shop/${slugify(shopData.title)}`}>{shopData.title}</NavLink>
+            </div>
+            <div>
+              <span>${shopData.price}</span>
 
-            <div className='d-flex flex-column gap-2 card-foot'>
-              <div className='d-flex flex-column gap-2 hidden-icons'>
-                <div className='icons'>
-                  <FaRegCopy />
+              <div className='d-flex flex-column gap-2 card-foot'>
+                <div className='d-flex flex-column gap-2 hidden-icons'>
+                  <div className='icons'>
+                    <FaRegCopy />
+                  </div>
+                  <div className='icons'>
+                    <MdCompareArrows />
+                  </div>
                 </div>
-                <div className='icons'>
-                  <MdCompareArrows />
+                <div className='icons' onClick={() => handleAddToCart(shopData)}>
+                  <FaBasketShopping />
                 </div>
               </div>
-              <div className='icons' onClick={() => handleAddToCart(shopData)}>
-                <FaBasketShopping />
-              </div>
-            </div>
 
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default SingleProduct;
+

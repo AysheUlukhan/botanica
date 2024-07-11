@@ -21,7 +21,7 @@
 
         .close_btn {
             cursor: pointer;
-            font-size: 20px;
+            font-size: 15px;
         }
 
         .nav-search {
@@ -92,9 +92,26 @@
                     }
                 }
             }
+
+            .dropdown-lang {
+                background-color: #FBF2E0;
+                border: 1px solid #FABE17;
+                top: 60px;
+                width: 70px;
+                text-align: center;
+                border-radius: 5px;
+
+                p {
+                    &:hover {
+                        background-color: #F2C419;
+                        cursor: pointer;
+                    }
+                }
+            }
         }
 
         .offcanvas {
+            background-color: #FBF2E0;
 
             .active {
                 width: 100%;
@@ -125,6 +142,31 @@
 
 
 
+        }
+
+        .search_wrapper{
+            position: relative;
+            .search_options{
+                position: absolute;
+                top: 70px;
+                background-color:#FBF2E0;
+                width: 100%;
+                border: 1px solid #FABE17;
+                border-radius: 8px;
+                padding: 4px;
+
+                a{
+                    color: black;
+                    width: 100%;
+                    display: inline-block;
+                    padding: 6px;
+                    &:hover{
+                        background-color: #F2C419;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            
         }
 
 

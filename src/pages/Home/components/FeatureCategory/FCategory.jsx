@@ -10,7 +10,7 @@ import 'swiper/css';
 import img1 from '../../../../assets/images/category1.jpg'
 import img2 from '../../../../assets/images/category2.webp'
 import img3 from '../../../../assets/images/category3.webp'
-
+import img_title from '../../../../assets/images/icon-title.webp'
 
 const FCategory = () => {
     return (
@@ -18,6 +18,7 @@ const FCategory = () => {
             <div className="container">
                 <div className="row">
                     <div className='fc-head'>
+                        <img src={img_title} alt="" />
                         <h6>Product Benefits</h6>
                         <h5>Featured Categories</h5>
                     </div>
@@ -68,7 +69,7 @@ const FCategory = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                            <div className="cards">
+                                <div className="cards">
                                     <div className='card-head'>
                                         <img src={img2} alt="" />
                                     </div>
@@ -103,7 +104,7 @@ const FCategory = () => {
                                     </div>
                                 </div>
                             </SwiperSlide> */}
-                           
+
                         </Swiper>
                     </div>
                 </div>

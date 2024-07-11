@@ -1,11 +1,26 @@
+// .product_card_back{
+//     height: 568px;
+//    position: absolute;
+//    background-color: red;
+//    border-radius: 20px;
+//    width: 380px;
+//    top: 24px;
+//    overflow: hidden;
+// border-bottom-left-radius: 20px;
+
+// }
+
 .product_card {
 
+   position: relative;
     .card {
         border: none !important;
         height: 560px !important;
         padding: 20px;
         border-radius: 20px;
         // position: relative;
+        // box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 10px 11px 20px 0px #00000026;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 
         .wrapper {
 
@@ -43,7 +58,7 @@
 
         }
 
-        
+
 
         .card_content {
             .card_stars {
@@ -79,7 +94,7 @@
                     opacity: 1;
                 }
 
-                
+
 
                 .icons {
                     background-color: #ECECEC;
@@ -130,22 +145,22 @@
             border-radius: 20px;
             background-color: #292929;
             .wrapper {
-    
+
                 .wishlist {
                     color: #C3C3C3;
                     font-size: 25px;
                     transition: all .3s;
-    
+
                     &:hover{
                         color: #FABE17;
                     }
                 }
-    
+
                 height: 450px;
-    
+
                 .img-area {
                     position: relative;
-    
+
                     img {
                         position: absolute;
                         left: 0;
@@ -153,51 +168,51 @@
                         width: 100%;
                         transition: opacity 0.5s ease-in-out;
                     }
-    
-    
+
+
                 }
-    
-    
+
+
             }
-    
-            
-    
+
+
+
             .card_content {
                 .card_stars {
                     color: #C3C3C3;
-    
+
                     sup {
                         color: #5E5E5E;
                     }
                 }
-    
+
                 a{
                     color: #C3C3C3;
                     font-size: 17px;
                     font-weight: 600;
-    
+
                     &:hover{
                         color: #FABE17;
                     }
                 }
-    
+
                 span{
                     color: #FABE17;
                     font-size: 15px;
                     font-weight: 700;
                 }
-    
+
                 .card-foot {
                     position: absolute;
                     right: 20px;
                     bottom: 20px;
-    
+
                     .hidden-icons {
                         opacity: 1;
                     }
-    
-                    
-    
+
+
+
                     .icons {
                         background-color: #FABE17;
                         padding: 13px;
@@ -208,32 +223,32 @@
                         color: #292929;
                         font-size: 18px;
                         transition: all .5s ease;
-    
+
                         &:hover{
                             background-color: #5B2800;
                             color: white;
                         }
                     }
                 }
-    
+
             }
-    
-    
+
+
             &:hover {
                 cursor: pointer;
-    
+
                 .img-front {
                     opacity: 0;
                 }
-    
-    
+
+
                 .hidden-icons {
                     opacity: 1 !important;
                 }
-    
+
             }
-    
-    
+
+
         }
     }
 }

@@ -2,14 +2,18 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import imgfooter from '../assets/images/logo-footer.png';
 import { FaFacebookF, FaTwitter, FaPinterest, FaTiktok } from "react-icons/fa";
-
+import img1 from '../assets/images/icon-footer.webp'
+import img2 from '../assets/images/icon-footer2.png'
 
 const Footer = () => {
   const location = useLocation();
   if (location.pathname !== "/404" &&
     location.pathname !== "/login" &&
     location.pathname !== "/register" &&
-    location.pathname !== "/reset_password"
+    location.pathname !== "/reset_password" &&
+    location.pathname !== "/dashboard" &&
+    location.pathname !== "/dashboard/users" &&
+    location.pathname !== "/dashboard/add"
 
   ) {
 
@@ -17,6 +21,8 @@ const Footer = () => {
       <footer>
         <div className='footer-subs'>
           <div className="container">
+            <img className='footer_img' src={img1} alt="" />
+            <img className='footer_img2' src={img2} alt="" />
             <div className='d-flex flex-column justify-content-center align-items-center'>
               <div className='text-center'>
                 <h5>Subscribe</h5>

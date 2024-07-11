@@ -3,12 +3,13 @@ import icon1 from '../../../../assets/images/icon-choose1.webp'
 import icon2 from '../../../../assets/images/icon-choose2.png'
 import icon3 from '../../../../assets/images/icon-choose3.webp'
 import { motion } from 'framer-motion';
-
+import img_title from '../../../../assets/images/icon-title.webp'
 const WChoose = () => {
     return (
         <div className='home_choose pt-5'>
             <div className="container">
                 <div className='text-center choose_head'>
+                    <img src={img_title} alt="" />
                     <p>Why Choose Us</p>
                     <h5>Why Choose Our Products</h5>
                 </div>

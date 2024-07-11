@@ -6,39 +6,41 @@ import { CiGrid41 } from "react-icons/ci";
 import { TfiLayoutGrid2Thumb } from "react-icons/tfi";
 import { shopData } from '../api/shopData';
 import { Select, Slider } from "antd";
+import { useSelector } from 'react-redux';
 
 const Shop = () => {
-  const [layout, setLayout] = useState('col-lg-6');
+  const data = useSelector(p => p)
+  const [layout, setLayout] = useState('col-lg-4');
   const [activeIcon, setActiveIcon] = useState('grid');
   const [category, setCategory] = useState([]);
-  const [filtered, setFiltered] = useState(shopData);
+  const [filtered, setFiltered] = useState(data);
   const [active, setActive] = useState("All Products");
   const [priceRange, setPriceRange] = useState([0, 100]);
   const { Option } = Select;
 
   const getMinPrice = () => {
-    return Math.min(...shopData.map(item => item.price));
+    return Math.min(...data.map(item => item.price));
   };
 
   const getMaxPrice = () => {
-    return Math.max(...shopData.map(item => item.price));
+    return Math.max(...data.map(item => item.price));
   };
 
   const minPrice = getMinPrice();
   const maxPrice = getMaxPrice();
 
   useEffect(() => {
-    const categories = ['All Products', ...new Set(shopData.map(item => item.category))];
+    const categories = ['All Products', ...new Set(data.map(item => item.category))];
     setCategory(categories);
   }, []);
 
   const filterData = (cat) => {
-    let filteredData = shopData;
+    let filteredData = data;
 
     if (cat !== 'All Products') {
       filteredData = filteredData.filter(p => p.category === cat);
     }
-    
+
     filteredData = filteredData.filter(item => item.price >= priceRange[0] && item.price <= priceRange[1]);
 
     setFiltered(filteredData);
@@ -46,12 +48,12 @@ const Shop = () => {
   };
 
   const handleGridLayout = () => {
-    setLayout('col-lg-6');
+    setLayout('col-lg-4');
     setActiveIcon('grid');
   };
 
   const handleListLayout = () => {
-    setLayout('col-lg-12');
+    setLayout('col-lg-6');
     setActiveIcon('list');
   };
 
@@ -66,7 +68,7 @@ const Shop = () => {
     } else if (sortType === "option4") {
       sortedProducts.sort((a, b) => b.price - a.price);
     } else {
-      sortedProducts = shopData;
+      sortedProducts = data;
     }
     setFiltered(sortedProducts);
   }
@@ -100,8 +102,8 @@ const Shop = () => {
       </motion.div>
 
       <div className="container py-5">
-        <div className="row">
-          <div className="col-lg-4">
+        <div className="row ">
+          <div className="col-lg-3">
             <div className="shop_category">
               <div className='cat_head'>
                 <p className='pb-3'>Categories</p>
@@ -146,7 +148,7 @@ const Shop = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-8 shop_cards">
+          <div className="col-lg-9 shop_cards">
             <div className='showing_results d-flex align-items-center justify-content-between'>
               <div className='d-flex align-items-center gap-4'>
                 <div className='d-flex gap-2'>

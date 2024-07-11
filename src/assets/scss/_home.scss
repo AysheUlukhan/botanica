@@ -32,6 +32,37 @@
 
     }
 
+    .images{
+        position: relative;
+        .bee_img{
+            position: absolute;
+            left: 40px;
+            animation: animate 2s infinite ease alternate;
+        }
+
+        .bee2_img{
+            position: absolute;
+            right: -40px;
+            bottom: 450px;
+            animation: animate2 7s infinite linear;
+        }
+    }
+
+}
+
+@keyframes animate {
+    to{
+        transform: translateY(30px);
+    }
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg) ;
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg) ;
+    }
 }
 
 @media (max-width:1400px) {
@@ -42,6 +73,18 @@
             font-size: 40px !important;
         }
 
+        .bee2_img{
+            bottom: 350px !important;
+        }
+
+    }
+}
+
+@media (max-width:1200px){
+    .hero{
+        .bee2_img{
+            bottom: 270px !important;
+        }
     }
 }
 
@@ -53,6 +96,13 @@
 
         h3 {
             font-size: 30px !important;
+        }
+
+        .bee_img{
+            display: none !important;
+        }
+        .bee2_img{
+            display: none !important;
         }
     }
 }
@@ -102,13 +152,14 @@
 
 .dark {
     .hero {
-        background-image: url('https://img.freepik.com/premium-photo/honey-drips-from-spoon-into-jar-black-background_222185-1240.jpg');
+        // background-image: url('https://img.freepik.com/premium-photo/honey-drips-from-spoon-into-jar-black-background_222185-1240.jpg');
         // background-image: url('https://t3.ftcdn.net/jpg/05/56/92/98/360_F_556929856_6CS7curJUR2Nc0rKXbtfuefyRTQQx4b0.jpg');
         //    background-image: url('https://img.freepik.com/premium-photo/golden-honey-drips-from-spoon-black-background_222185-1241.jpg');
+        background-image: url('https://w0.peakpx.com/wallpaper/410/412/HD-wallpaper-plain-black-black.jpg');
         background-position: center;
         background-repeat: no-repeat;
         object-fit: contain;
-        height: 100vh;
+        // height: 100vh;
         width: 100%;
 
         h5 {
@@ -124,5 +175,11 @@
             // box-shadow: 0 0 5px #fff700, 0 0 5px #fff700, 0 0 5px #fff700, 0 0 5px #fff700, 0 0 10px #fff700, 0 0 10px #fff700, 0 0 30px #fff700;
             box-shadow: 0 0 5px #FABE17, 0 0 10px #FABE17, 0 0 15px #FABE17;
         }
+
+        // .images{
+        //     .hero_img{
+        //         width: 550px !important;
+        //     }
+        // }
     }
 }

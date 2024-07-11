@@ -10,13 +10,17 @@
 
   import 'swiper/css';
   import {shopData} from '../../../../api/shopData'
+import { useSelector } from 'react-redux';
+import img_title from '../../../../assets/images/icon-title.webp'
   const OurProduct = () => {
+    const data = useSelector(p=>p)
     
     return (
       <div className='our_product mt-5'>
         <div className='container pt-5'>
           <div className="row">
             <div className='text-center'>
+            <img src={img_title} alt="" />
               <h3>Our Products</h3>
             </div>
             <Swiper
@@ -54,7 +58,7 @@
               }}
             >
               {
-                shopData.map((item) => (
+                data.map((item) => (
                   <SwiperSlide>
                     <SingleProduct shopData={item} key={item.id} />
                   </SwiperSlide>

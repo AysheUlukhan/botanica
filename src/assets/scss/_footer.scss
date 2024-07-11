@@ -1,7 +1,7 @@
 .footer-subs{
     background-image: url('../images/bg-footer4.webp');
     padding: 100px 0;
-
+    position: relative;
     h5{
         font-size: 35px;
         color: #222222;
@@ -100,6 +100,25 @@
         }
     }
 
+
+    .footer_img{
+        position: absolute;
+        left: 10px;
+        animation: animate 1.5s infinite ease alternate;
+    }
+
+    .footer_img2{
+        position: absolute;
+        right: 5px;
+        animation: animate 1.5s infinite ease alternate;
+    }
+
+}
+
+@keyframes animate {
+    to{
+        transform: translateY(30px);
+    }
 }
 
 @media (max-width:610px) {
@@ -114,6 +133,16 @@
             justify-content: flex-start !important;
             align-items: flex-start !important;
         }
+    }
+}
+
+@media (max-width:992px){
+    .footer_img{
+        display: none;
+    }
+
+    .footer_img2{
+        display: none;
     }
 }
 

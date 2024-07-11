@@ -8,20 +8,29 @@ import { WishlistProvider } from 'react-use-wishlist';
 import { CartProvider } from 'react-use-cart';
 import { ModeProvider } from './context/ModeContext.jsx';
 import './i18n/i18next.jsx'
-const normalu = {
-  email: "ayse@gmail.com",
-  password: "ayse123"
+import shopStore from './redux/store/shopStore.js';
+import { GetProduct } from './redux/actions/shopAction.js';
+import { Provider } from 'react-redux';
+import supabase from './config/connectdb.js';
+
+
+const store = shopStore();
+
+// store.subscribe(() => {
+//   console.log(store.getState());
+// })
+
+
+const fetchData = async () => {
+  const { data, error } = await supabase.from('product').select()
+
+  store.dispatch(GetProduct(data));
 }
+fetchData();
 
-const normalud = JSON.stringify(normalu)
-
-const setNormalUser = () =>{
-  localStorage.setItem('userdata',normalud)
-}
-
-setNormalUser();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
     <ModeProvider>
       <CartProvider>
         <WishlistProvider>
@@ -29,5 +38,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </WishlistProvider>
       </CartProvider>
     </ModeProvider>
+  </Provider>
 )
 
