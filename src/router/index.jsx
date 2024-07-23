@@ -30,6 +30,8 @@ import Users from '../dashboard/Users';
 import AddProduct from '../dashboard/AddProduct';
 import EditProduct from '../dashboard/EditProduct';
 import Preloader from '../components/Preloader';
+import Checkout from '../pages/Checkout';
+import Account from '../pages/Account';
 
 
 
@@ -68,6 +70,8 @@ const AppRouter = () => {
                 <Route element={<Users />} path='/dashboard/users' />
                 <Route element={<AddProduct />} path='/dashboard/add' />
                 <Route element={<EditProduct />} path='/dashboard/edit/:slug' />
+                <Route element={<Checkout />} path='/checkout' />
+                <Route element={<Account />} path='/account' />
               </Routes>
               <GoToTop />
               <Footer />

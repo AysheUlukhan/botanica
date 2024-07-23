@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { HiOutlineMenuAlt1, HiOutlineSun } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
 import logo from '../assets/images/logo.png';
@@ -49,8 +49,35 @@ const Header = () => {
         navigate('/dashboard')
     }
 
+    // const isExcludedPath = () => {
+    //     const excludedPaths = [
+    //         "/404",
+    //         "/login",
+    //         "/register",
+    //         "/reset_password",
+    //         "/dashboard",
+    //         "/dashboard/users",
+    //         "/dashboard/add"
+    //     ];
 
-    const isExcludedPath = () => {
+    //     if (excludedPaths.includes(pathname)) {
+    //         return true;
+    //     }
+
+    //     const dynamicPaths = [
+    //         /^\/dashboard\/edit\/[^/]+$/
+    //     ];
+
+    //     return dynamicPaths.some((pattern) => pattern.test(pathname));
+    // };
+
+    // if (isExcludedPath()) {
+    //     return null;
+    // }
+
+
+
+    const isExcludedPath = useCallback(() => {
         const excludedPaths = [
             "/404",
             "/login",
@@ -70,18 +97,12 @@ const Header = () => {
         ];
 
         return dynamicPaths.some((pattern) => pattern.test(pathname));
-    };
-
-    if (isExcludedPath()) {
-        return null;
-    }
+    }, [pathname]);
 
     const [search, setSearch] = useState("");
 
     const [showOptions, setShowOptions] = useState(false);
     const wrapperRef = useRef(null);
-
-    const filteredData = data.filter(p => p.title.toLowerCase().includes(search.toLowerCase()));
 
     const handleClickOutside = event => {
         if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
@@ -89,12 +110,19 @@ const Header = () => {
         }
     };
 
+    const filteredData = data.filter(p => p.title.toLowerCase().includes(search.toLowerCase()));
+
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    if (isExcludedPath()) {
+        return null;
+    }
+
     return (
         <>
             <header className="xl_header d-none d-xl-block d-xxl-block d-lg-block">
@@ -223,7 +251,7 @@ const Header = () => {
                                             <h6>Admin</h6>
                                             <p>admin@gmail.com</p>
                                         </div>
-                                        <li><a className="dropdown-item" href="#">Account</a></li>
+                                        <li><Link className="dropdown-item" to={'/account'}>Account</Link></li>
                                         <li><button onClick={dash} className="dropdown-item">Dashboard</button></li>
                                         <li><button onClick={logout} className="dropdown-item logout">Log out</button></li>
                                     </ul>
@@ -236,7 +264,7 @@ const Header = () => {
                                             <h6>{localStorage.getItem('username')} {localStorage.getItem('surname')}</h6>
                                             <p>{localStorage.getItem('email')}</p>
                                         </div>
-                                        <li><a className="dropdown-item" href="#">Account</a></li>
+                                        <li><Link className="dropdown-item" to={'/account'}>Account</Link></li>
                                         <li><button onClick={logout} className="dropdown-item logout">Log out</button></li>
                                     </ul>
                                 </div> : <Link to='/login' className='icon'>

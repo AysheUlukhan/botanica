@@ -10,6 +10,7 @@ import slugify from 'react-slugify';
 import { useCart } from 'react-use-cart';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
+import WishBtn from '../WishBtn';
 
 const SingleProduct = ({ shopData }) => {
   const { addWishlistItem } = useWishlist();
@@ -26,7 +27,8 @@ const SingleProduct = ({ shopData }) => {
         <div className="card">
           <div className="wrapper">
             <div className='d-flex justify-content-end'>
-              <Link to={'/wishlist'} onClick={() => addWishlistItem(shopData)}><IoHeartSharp className='wishlist' /></Link>
+              {/* <Link to={'/wishlist'} onClick={() => addWishlistItem(shopData)}><IoHeartSharp className='wishlist' /></Link> */}
+              <WishBtn myWishlist={shopData}/>
             </div>
             <figure>
               <div className='img-area'>
