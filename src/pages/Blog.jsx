@@ -7,12 +7,16 @@ import { IoMenu, IoSearchOutline } from "react-icons/io5";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import slugify from 'react-slugify';
+import Pagination from 'antd/lib/pagination';
 
 const Blog = () => {
   const [category, setCategory] = useState([]);
   const [filtered, setFiltered] = useState(blogData);
   const [active, setActive] = useState("All News");
   const [search, setSearch] = useState('');
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [blogsPerPage] = useState(6);
 
   const breadcrumbItems = [
     { text: 'Home', link: '/' },
@@ -30,12 +34,11 @@ const Blog = () => {
         item.title.toLowerCase().includes(search.toLowerCase())
       );
       setFiltered(searchResults);
+      setCurrentPage(1);
     } else {
       filterData(active);
     }
   }, [search]);
-
-
 
   const filterData = (cat) => {
     if (cat === 'All News') {
@@ -46,8 +49,17 @@ const Blog = () => {
       setFiltered(filteredDt);
       setActive(cat);
     }
+    setCurrentPage(1);
   }
 
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = filtered.slice(indexOfFirstBlog, indexOfLastBlog);
 
   const recentBlogs = blogData.slice(-4).reverse();
 
@@ -104,9 +116,9 @@ const Blog = () => {
               {
                 recentBlogs.map((item) => (
                   <div className='d-flex align-items-center gap-3 mb-4'>
-                    <div className='recent_img'><img src={item.img} alt={item.title}  className="d-block mx-lg-auto img-fluid"/></div>
+                    <div className='recent_img'><img src={item.img} alt={item.title} className="d-block mx-lg-auto img-fluid" /></div>
                     <div>
-                    <Link to={`/blog/${slugify(item.title)}`}>{item.title}</Link>
+                      <Link to={`/blog/${slugify(item.title)}`}>{item.title}</Link>
                       <p className='d-flex align-items-center gap-2 date'><FaRegCalendarAlt /><span>{item.date}</span></p>
                     </div>
                   </div>
@@ -114,15 +126,24 @@ const Blog = () => {
               }
             </div>
           </div>
-          <div className="col-lg-7">
+          <div className="col-lg-8">
             <div className="row row-gap-5">
-              {filtered.length === 0 ? (
-                <img src='https://cdn.dribbble.com/users/406903/screenshots/6723682/drawkit-grape-pack-illustration-3-dribbble-export-v0.1.gif' />
+              {currentBlogs.length === 0 ? (
+                <img src='https://cdn.dribbble.com/users/406903/screenshots/6723682/drawkit-grape-pack-illustration-3-dribbble-export-v0.1.gif' alt="No results found" />
               ) : (
-                filtered.map((item) => (
+                currentBlogs.map((item) => (
                   <BlogCard blogData={item} key={item.id} page="blog" />
                 ))
               )}
+            </div>
+            <div className='text-center mt-5'>
+              <Pagination
+                current={currentPage}
+                total={filtered.length}
+                pageSize={blogsPerPage}
+                onChange={handlePageChange}
+                className="mt-4"
+              />
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ const DashSidebar = () => {
         <div   className='dash_sidebar'>
             <div className="sidebar">
                 <div className="top_section">
-                    <h1  className='dash_logo'>Dashboard</h1>
+                    <h5 className='dash_logo'>Dashboard</h5>
                     <div  className="bars">
                         <FaBars/>
                     </div>
@@ -28,7 +28,7 @@ const DashSidebar = () => {
                     menuItem.map((item, index) => (
                         <NavLink to={item.path} key={index} className="link" activeclassname="active">
                             <div className='icon'>{item.icon}</div>
-                            <div  className="link-text">{item.name}</div>
+                            <p  className="link-text">{item.name}</p>
                         </NavLink>
                     ))
                 }

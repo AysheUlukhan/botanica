@@ -7,6 +7,7 @@ import { TfiLayoutGrid2Thumb } from "react-icons/tfi";
 import { shopData } from '../api/shopData';
 import { Select, Slider } from "antd";
 import { useSelector } from 'react-redux';
+import Pagination from 'antd/lib/pagination';
 
 const Shop = () => {
   const data = useSelector(p => p)
@@ -17,6 +18,9 @@ const Shop = () => {
   const [active, setActive] = useState("All Products");
   const [priceRange, setPriceRange] = useState([0, 100]);
   const { Option } = Select;
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(6);
 
   const getMinPrice = () => {
     return Math.min(...data.map(item => item.price));
@@ -45,6 +49,7 @@ const Shop = () => {
 
     setFiltered(filteredData);
     setActive(cat);
+    setCurrentPage(1);
   };
 
   const handleGridLayout = () => {
@@ -76,6 +81,14 @@ const Shop = () => {
   const handlePriceFilter = () => {
     filterData(active);
   };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filtered.slice(indexOfFirstProduct, indexOfLastProduct);
 
   const breadcrumbItems = [
     { text: 'Home', link: '/' },
@@ -133,7 +146,7 @@ const Shop = () => {
                 onChange={(value) => setPriceRange(value)}
               />
               <div className='d-flex justify-content-between align-items-center maxmin_price'>
-                <p>${minPrice}</p>
+                <p>$0</p>
                 <p>${maxPrice}</p>
               </div>
 
@@ -165,7 +178,7 @@ const Shop = () => {
                     <TfiLayoutGrid2Thumb />
                   </div>
                 </div>
-                <p>Showing all {filtered.length} results</p>
+                <p>Showing {currentProducts.length} of {filtered.length} results</p>
               </div>
               <div className="custom-select">
                 <Select
@@ -187,13 +200,20 @@ const Shop = () => {
             </div>
             <div className="row">
               {
-                filtered.map((item) => (
+                currentProducts.map((item) => (
                   <div className={layout} key={item.id}>
                     <SingleProduct shopData={item} />
                   </div>
                 ))
               }
             </div>
+            <Pagination
+              current={currentPage}
+              total={filtered.length}
+              pageSize={productsPerPage}
+              onChange={handlePageChange}
+              className='text-center mt-5'
+            />
           </div>
         </div>
       </div>

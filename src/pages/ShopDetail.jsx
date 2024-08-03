@@ -22,6 +22,7 @@ import {
 } from "swiper/modules";
 import SingleProduct from '../components/SingleProduct';
 import { useSelector } from 'react-redux';
+import WishBtn from '../components/WishBtn';
 
 const ShopDetail = () => {
     const { slug } = useParams();
@@ -38,8 +39,12 @@ const ShopDetail = () => {
     const { addItem } = useCart();
 
     const handleAddToCart = (item) => {
-        addItem(item, quantity);
-        toast.success('Məhsul səbətə əlavə edildi.');
+        if (localStorage.getItem('login') === 'true') {
+            addItem(item, quantity);
+            toast.success('Məhsul sebətə əlavə edildi.');
+          } else {
+            toast.error('İlk öncə giriş etməlisiniz!');
+          }
     };
 
     const increaseQuantity = () => {
@@ -93,8 +98,9 @@ const ShopDetail = () => {
                     <div className="col-lg-6 detail_content">
                         <div className='head'>
                             <h4>{shopDetails.title}</h4>
-                            <div className='d-flex justify-content-end wishlist'>
-                                <Link to={'/wishlist'}><IoHeartSharp className='' /></Link>
+                            <div className='d-flex justify-content-end wish-btn'>
+                                {/* <Link to={'/wishlist'}><IoHeartSharp className='' /></Link> */}
+                                <WishBtn myWishlist={shopDetails} />
                             </div>
                         </div>
                         <span className='price'>${shopDetails.price}</span>

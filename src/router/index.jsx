@@ -32,6 +32,7 @@ import EditProduct from '../dashboard/EditProduct';
 import Preloader from '../components/Preloader';
 import Checkout from '../pages/Checkout';
 import Account from '../pages/Account';
+import Thankyou from '../pages/Thankyou';
 
 
 
@@ -43,6 +44,10 @@ const AppRouter = () => {
       setInitialLoading(false);
     }, 1000);
   }, []);
+
+  if (initialLoading) {
+    return <Preloader />;
+  }
 
   return (
     <>
@@ -72,6 +77,7 @@ const AppRouter = () => {
                 <Route element={<EditProduct />} path='/dashboard/edit/:slug' />
                 <Route element={<Checkout />} path='/checkout' />
                 <Route element={<Account />} path='/account' />
+                <Route element={<Thankyou />} path='/thankyou' />
               </Routes>
               <GoToTop />
               <Footer />

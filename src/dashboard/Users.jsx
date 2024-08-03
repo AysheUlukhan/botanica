@@ -21,15 +21,16 @@ const Users = () => {
     <div className='d-flex'>
       <DashSidebar />
       <div className='users'>
-        <div className='d-flex align-items-center justify-content-center flex-column mt-5'>
-          <h4>Users</h4>
+        <div className='d-flex align-items-center justify-content-center flex-column'>
+         
           <div className="container">
             <div className='row d-flex justify-content-center'>
-              <div className="col-lg-9">
+              <div className="col-lg-10">
+              <h4 className='text-center my-5'>Users</h4>
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
+                      <th scope="col"></th>
                       <th scope="col">Name</th>
                       <th scope="col">Surname</th>
                       <th scope="col">Email</th>

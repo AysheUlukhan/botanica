@@ -9,8 +9,7 @@ const AddProduct = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch(p=>p)
   return (
-    <div className=''>
-      
+    <div>
       <ProductForm sendForm={(fd)=>{
         dispatch(addProducToDatabase(fd))
         toast.success('Product added')

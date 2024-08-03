@@ -1,12 +1,62 @@
 {
-    "header":{
-        "0":"ANA SƏHİFƏ",
-        "1":"HAQQIMIZDA",
-        "2":"MƏHSULLAR",
-        "3":"BLOQ",
-        "4":"ƏLAQƏ",
-        "5":"EPoçt",
-        "6":"Zəng edin",
-        "7":"ALIŞ-VERİŞ KARTI"
+    "header": {
+        "0": "ANA SƏHİFƏ",
+        "1": "HAQQIMIZDA",
+        "2": "MƏHSULLAR",
+        "3": "BLOQ",
+        "4": "ƏLAQƏ",
+        "5": "E-Poçt",
+        "6": "Zəng edin",
+        "7": "Axtarış",
+        "8": "Məlumat tapılmadı",
+        "9": "İdarəetmə Paneli",
+        "10": "Çıxış",
+        "11": "Alış-veriş səbəti",
+        "12": "ÜMUMİ QİYMƏT",
+        "13": "CARDA BAX",
+        "14": "Yoxla"
+    },
+    "footer": {
+        "0": "Abunə ol",
+        "1": "Botanica məhsulları haqqında xüsusi təkliflər və eksklüziv xəbərlər almaq üçün bülletenə qeydiyyatdan keçin",
+        "3": "Abunə",
+        "4": "Sifarişlər Və Qaytarmalar",
+        "5": "Bizim e-commerce mağazamızda ən təbii və yüksək keyfiyyətli məhsulları tapın. Botanica ilə sağlam və təbii gözəlliklərə sahib olun. Sizin məmnuniyyətiniz bizim üçün önəmlidir. Bizimlə alış-veriş edərək, təbiətin gücünü hiss edin!",
+        "6": "Hesabım",
+        "7": "İstək Listim",
+        "8": "Səbətim"
+    },
+    "home": {
+        "0": "Təzə və Təmiz Bal",
+        "1": "Təravətli Nanə Ətri ",
+        "2": "Təbii Bal",
+        "3": "İNDİ ALIŞ-VERİŞƏ BAŞLA"
+    },
+    "whoose": {
+        "0": "Niyə Bizi Seçməlisiniz",
+        "1": "Niyə Məhsullarımızı Seçməlisiniz",
+        "2": "Tam Təbii və Üzvi Bal",
+        "3": "Təbii balın qidalandırıcı vasitə kimi istifadəsi qidalanma faydaları və müalicəvi vədləri ilə əlaqələndirilir."
+    },
+    "acertification": {
+        "0": "Həqiqi Mənbə Sertifikatlıdır",
+        "1": "Orijinallıq Sertifikatı",
+        "2":"True Source Honey sertifikatı balın şəffaf şəkildə əldə edildiyini və həqiqiliyi üçün sınaqdan keçirildiyini təsdiqləyir. İstehlakçılar bal və ya həqiqi mənbə daşıyan bal ehtiva edən məhsullar aldıqda."   
+    },
+    "ourproduct":{
+        "0": "Məhsullarımız",
+        "1": "BÜTÜN MƏHSULLAR"          
+    },
+    "pbenefit":{
+        "0":"Məhsulun Faydaları",
+        "1":"Balın İxtisası",
+        "2":"Balın tərkibində əsasən şəkər, həmçinin amin turşuları, vitaminlər, minerallar, dəmir, sink və antioksidantların qarışığı var. Bal təbii tatlandırıcı kimi istifadə olunmaqla yanaşı, iltihab əleyhinə, antioksidant və antibakterial agent kimi də istifadə olunur.",
+        "3":"Bal şəkərdən daha təhlükəsizdir",
+        "4":"Bal Dəri və Baş Dərisi İnfeksiyaları ilə Mübarizə aparır",
+        "5":"Bal Uşaqlara Sağlam Yatmağa kömək edir"
+    },
+    "fcategory":{
+        "0":"Product Benefits"
+
     }
 }

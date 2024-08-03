@@ -36,15 +36,20 @@ const Register = () => {
           });
           if (error) {
             console.log(error.message);
-            toast.error("Something is wrong");
           } else {
-            toast.success("Account was created! Redirected in 2 seconds");
+            toast.success("Yeni istifadəçi hesabı yaradıldı!");
             setTimeout(() => {
               window.location.assign('/login');
-            }, 2000);
+            }, 1000);
           }
         }
-        createUser();
+        const checkuser = async () => {
+          const { data } = await supabase.from('users').select();
+          data?.map((item) => (
+            item.email === emailRef.current.value ? toast.error("Bu e-poçt artıq istifadə olunub!") : createUser()
+          ))
+        }
+        checkuser();
 
       }
     }

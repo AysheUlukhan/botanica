@@ -17,13 +17,15 @@ const Dashboard = () => {
                         <h4>Dashboard</h4>
                     </div>
                     <div className="container mt-3">
-                        <Link className='btn btn-danger' to="/dashboard/add">Add</Link>
                         <div className="row d-flex justify-content-center">
-                            <div className="col-lg-9">
+                            <div className="col-lg-10">
+                                <div className='add-btn my-3'>
+                                    <Link to="/dashboard/add">Add</Link>
+                                </div>
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
+                                            <th scope="col"></th>
                                             <th scope="col">Front Img</th>
                                             <th scope="col">Back Img</th>
                                             <th scope="col">Title</th>
@@ -45,8 +47,8 @@ const Dashboard = () => {
                                                 <td>{item.category}</td>
                                                 <td>${item.price}</td>
                                                 <td>{item.stock}</td>
-                                                <td><Link to={`/dashboard/edit/${slugify(item.title)}`} >Edit</Link></td>
-                                                <td><button onClick={() => { dispatch(deleteProductToDatabase(item.id)) }}>Delete</button></td>
+                                                <td><Link className='btn-edit' to={`/dashboard/edit/${slugify(item.title)}`} >Edit</Link></td>
+                                                <td><button className='btn-delete' onClick={() => { dispatch(deleteProductToDatabase(item.id)) }}>Delete</button></td>
                                             </tr>
                                         ))
                                         }

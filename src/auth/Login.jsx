@@ -46,9 +46,19 @@ const Login = () => {
                     if (error) {
                         console.log(error);
                     } else {
-                        data.map((item) => (
-                            item.email === emailRef.current.value && item.password === passRef.current.value ? createLogin(item.name, item.surname, item.email) : toast.error("Email or password is wrong!")
-                        ))
+                       
+                        const userfind = data.find((p)=>{return p.email == emailRef.current.value});
+                        if (userfind === undefined) {
+                            toast.error("Email və ya password səhvdir")
+                        }else{
+                            if (userfind.password === passRef.current.value) {
+                                createLogin(userfind.name, userfind.surname, userfind.email)
+                            }else{
+                                toast.error("Email və ya password səhvdir")
+                            }
+                        }
+
+
 
                     }
                 }

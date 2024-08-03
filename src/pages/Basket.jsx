@@ -52,7 +52,7 @@ const Basket = () => {
                     <tbody >
                       {items.map(item => (
                         <tr >
-                          <td ><div className='border'><img width={100} src={item.front_img} alt={item.title} /></div></td>
+                          <td ><div className='border'><img width={100} src={item.frontImg} alt={item.title} /></div></td>
                           <td>{item.title}</td>
                           <td>${item.price}</td>
                           <td>
@@ -80,7 +80,7 @@ const Basket = () => {
 
                         <div className='d-flex justify-content-between align-items-center border-bottom pb-4'>
                           <p className='card_head'>PRODUCT:</p>
-                          <div className='border'><img width={100} src={item.front_img} alt={item.title} /></div>
+                          <div className='border'><img width={100} src={item.frontImg} alt={item.title} /></div>
                           <p>{item.title}</p>
                         </div>
 
@@ -130,7 +130,7 @@ const Basket = () => {
                       <p>Total</p>
                       <span className='total_price'>${total_price()}.00</span>
                     </div>
-                    <Link className='mt-5'>PROCEED TO CHECKOUT</Link>
+                    <Link to='/checkout' className='mt-5'>PROCEED TO CHECKOUT</Link>
                   </div>
                 </div>
               </div>

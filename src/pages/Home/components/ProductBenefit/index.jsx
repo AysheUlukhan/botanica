@@ -2,7 +2,9 @@ import React from 'react';
 import img from '../../../../assets/images/benefithoney1.webp';
 import img_bee from '../../../../assets/images/icon-bee.png'
 import img_title from '../../../../assets/images/icon-title.webp'
+import { useTranslation } from 'react-i18next';
 const PBenefit = () => {
+    const { t } = useTranslation();
     return (
         <div className='product_benefit py-5'>
             <div>
@@ -11,16 +13,16 @@ const PBenefit = () => {
             <div className="container">
                 <div className='pb_head text-center'>
                     <img src={img_title} alt="" />
-                    <h6>Product Benefits</h6>
-                    <h5 className='pt-3'>Speciality of Honey</h5>
-                    <p className='pt-3'>Honey contains mostly sugar, as well as a mix of amino acids, vitamins, minerals, iron, zinc and antioxidants. In addition to its use as a natural sweetener, honey is used as an anti-inflammatory, antioxidant and antibacterial agent.</p>
+                    <h6>{t("pbenefit.0")}</h6>
+                    <h5 className='pt-3'>{t("pbenefit.1")}</h5>
+                    <p className='pt-3'>{t("pbenefit.2")}</p>
                 </div>
 
                 <div className="row pt-5">
                     <div className="col-lg-4 ">
                         <div className='benefit-card'>
                             <div className='d-flex gap-5'>
-                                <p className='mb-0'>Honey is safer than Sugar</p>
+                                <p className='mb-0'>{t("pbenefit.3")}</p>
                                 <div className='hexagon' >
                                     <div className='count-wrapper'>
                                         <span>01</span>
@@ -31,7 +33,7 @@ const PBenefit = () => {
                         </div>
                         <div className='benefit-card'>
                             <div className='d-flex gap-5'>
-                                <p className='mb-0'>Honey Combats Skin andScalp Infections</p>
+                                <p className='mb-0'>{t("pbenefit.4")}</p>
                                 <div className='hexagon' >
                                     <div className='count-wrapper'>
                                         <span>02</span>
@@ -42,7 +44,7 @@ const PBenefit = () => {
                         </div>
                         <div className='benefit-card'>
                             <div className='d-flex gap-5'>
-                                <p className='mb-0'>Honey helps ChildrenSleep Soundly</p>
+                                <p className='mb-0'>{t("pbenefit.5")}</p>
                                 <div className='hexagon' >
                                     <div className='count-wrapper'>
                                         <span>03</span>
@@ -60,7 +62,7 @@ const PBenefit = () => {
                     <div className="col-lg-4 ">
                         <div className='benefit-card'>
                             <div className='d-flex gap-5'>
-                                <p className='mb-0'>Honey is safer than Sugar</p>
+                                <p className='mb-0'>{t("pbenefit.3")}</p>
                                 <div className='hexagon' >
                                     <div className='count-wrapper'>
                                         <span>01</span>
@@ -71,7 +73,7 @@ const PBenefit = () => {
                         </div>
                         <div className='benefit-card'>
                             <div className='d-flex gap-5'>
-                                <p className='mb-0'>Honey Combats Skin andScalp Infections</p>
+                                <p className='mb-0'>{t("pbenefit.4")}</p>
                                 <div className='hexagon' >
                                     <div className='count-wrapper'>
                                         <span>02</span>
@@ -82,7 +84,7 @@ const PBenefit = () => {
                         </div>
                         <div className='benefit-card'>
                             <div className='d-flex gap-5'>
-                                <p className='mb-0'>Honey helps ChildrenSleep Soundly</p>
+                                <p className='mb-0'>{t("pbenefit.5")}</p>
                                 <div className='hexagon' >
                                     <div className='count-wrapper'>
                                         <span>03</span>

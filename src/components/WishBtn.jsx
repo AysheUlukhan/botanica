@@ -8,22 +8,30 @@ const WishBtn = ({ myWishlist }) => {
     const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
 
     const toggleFunc = (product) => {
-        if (inWishlist(product.id)) {
-            removeWishlistItem(product.id)
-            toast.warning('Favorilərdən silindi')
+        if (localStorage.getItem('login') === 'true') {
+            if (inWishlist(product.id)) {
+                removeWishlistItem(product.id)
+                toast.warning('Favorilərdən silindi')
+            } else {
+                addWishlistItem(product)
+                toast.success('Favorilərə əlavə olundu')
+            }
         } else {
-            addWishlistItem(product)
-            toast.success('Favorilərə əlavə olundu')
+            toast.error('İlk öncə giriş etməlisiniz!');
         }
     }
+
     return (
-        <Link onClick={()=>toggleFunc(myWishlist)}>
-            {
-                inWishlist(myWishlist.id) ? <IoHeartSharp className='wishlist-full' />  : <IoHeartSharp className='wishlist' />
+        <Link onClick={() => {
+            if (localStorage.getItem('login') === 'true') {
+                toggleFunc(myWishlist);
+            } else {
+                toast.error('İlk öncə giriş etməlisiniz!');
             }
-           
-            </Link>
+        }}>
+            <IoHeartSharp className={localStorage.getItem('login') === 'true' ? (inWishlist(myWishlist.id) ? 'wishlist-full' : 'wishlist') : 'wishlist'} />
+        </Link>
     )
 }
 
-export default WishBtn
+export default WishBtn;

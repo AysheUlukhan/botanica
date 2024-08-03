@@ -156,4 +156,15 @@
             border-radius: 15px;
         }
     }
+
+    .ant-pagination-item{
+        width: 42px;
+        height: 35px;
+    }
+
+    :where(.css-dev-only-do-not-override-17seli4).ant-pagination .ant-pagination-item-active{
+        background-color: #FABE17;
+        border-color: #FABE17;
+        color: white;
+    }
 }

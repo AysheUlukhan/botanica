@@ -1,0 +1,77 @@
+.checkout {
+    .banner {
+        background-image: url('../images/breadcrumb.webp');
+        padding: 250px 0 100px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    form {
+        .input-data {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                width: 100%;
+                padding: 10px 0 10px 20px;
+                border-radius: 8px;
+                outline: none;
+                border: 1px solid #D6D6D6;
+                font-size: 15px;
+
+                &:focus {
+                    border: 1px solid #FABE17;
+                }
+
+                &:hover{
+                    border: 1px solid #FABE17;
+                }
+            }
+
+            label {
+                font-size: 14px;
+                padding-left: 5px;
+                font-weight: 500;
+                padding-bottom: 6px;
+            }
+        }
+    }
+
+    .checkout-product {
+        border: 1px solid #F2F2F2;
+        border-radius: 20px;
+
+        .head-order {
+            padding: 20px;
+            h5{
+                font-size: 20px;
+            }
+        }
+
+        .order-content {
+            
+            padding: 20px;
+            background-color: #F2F2F2;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        button{
+            width: 100%;
+            background-color: #7A3E1C;
+            padding: 15px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 15px;
+            color: white;
+            font-weight: 600;
+            border: none;
+        }
+    }
+}

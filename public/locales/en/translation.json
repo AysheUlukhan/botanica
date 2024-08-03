@@ -1,12 +1,65 @@
 {
-    "header":{
-        "0":"HOME",
-        "1":"ABOUT",
-        "2":"SHOP",
-        "3":"BLOG",
-        "4":"CONTACT",
-        "5":"Email",
-        "6":"Call Us",
-        "7":"SHOPPING CART"
+    "header": {
+        "0": "HOME",
+        "1": "ABOUT",
+        "2": "SHOP",
+        "3": "BLOG",
+        "4": "CONTACT",
+        "5": "Email",
+        "6": "Call Us",
+        "7": "Enter Your Keyword",
+        "8": "Product not found",
+        "9": "Dashboard",
+        "10": "Log out",
+        "11": "Shopping Cart",
+        "12": "SUBTOTAL",
+        "13": "VIEW CART",
+        "14": "CHECKOUT"
+    },
+    "footer": {
+        "0": "Subscribe",
+        "1": "Sign up for newsletter to receive special offers and exclusive news about Botanica products",
+        "3": "Subscribe",
+        "4": "Orders And Returns",
+        "5": "Find the most natural and complete products in our e-commerce store. Get healthy and naturally beautiful with botanicals. Your benefit is important to us. Enjoy shopping with us, feel the power of nature!",
+        "6": "My Account",
+        "7": "My Wishlist",
+        "8": "My Card"
+
+    },
+    "home":{
+        "0":"Fresh Organic",
+        "1":"Mint Blossom",
+        "2":"Honey",
+        "3":"SHOP NOW"
+    },
+    "whoose": {
+        "0": "Why Choose Us",
+        "1": "Why Choose Our Products",
+        "2": "All-Natural and Organic Honey",
+        "3":"The use of natural honey as a nutraceutical agent is associated with nutritional benefits and therapeutic promises."
+    },
+    "acertification":{
+        "0": "True Source Certified",
+        "1": "Authenticity Certification",
+        "2":"True Source Honey certification confirms that honey was sourced in a transparent manner and tested for authenticity. When consumers buy honey or honey containing products bearing the True Source."    
+    },
+    "ourproduct":{
+        "0": "Our Products",
+        "1": "ALL PRODUCTS"        
+    },
+    "pbenefit":{
+        "0":"Product Benefits",
+        "1":"Speciality of Honey",
+        "2":"Honey contains mostly sugar, as well as a mix of amino acids, vitamins, minerals, iron, zinc and antioxidants. In addition to its use as a natural sweetener, honey is used as an anti-inflammatory, antioxidant and antibacterial agent.",
+        "3":"Honey is safer than Sugar",
+        "4":"Honey Combats Skin andScalp Infections",
+        "5":"Honey helps ChildrenSleep Soundly"
+    },
+    "fcategory":{
+        "0":"Product Benefits"
     }
+
+
+
 }

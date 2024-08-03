@@ -1,0 +1,24 @@
+.thankyou{
+    .banner {
+        background-image: url('../images/breadcrumb.webp');
+        padding: 250px 0 100px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .check-icon{
+        background-color: #FABE17;
+        color: white;
+        font-size: 100px;
+        border-radius: 50%;
+        padding: 10px;
+        border: 4px solid #5B2800;
+        
+    }
+}

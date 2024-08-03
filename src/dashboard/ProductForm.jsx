@@ -29,8 +29,8 @@ const ProductForm = ({ sendForm, editdata }) => {
     return (
         <div className='d-flex product_form'>
             <DashSidebar />
-            <div className='container'>
-                <h4 className='text-center my-3'>Add product</h4>
+            <div className='container mt-5'>
+                <h5 className='text-center'>{editdata ? "Edit Product" : "Add Product"}</h5>
                 <div className="row d-flex justify-content-center">
                     <div className="col-lg-8">
                         <form onSubmit={formSubmited}>
@@ -84,7 +84,9 @@ const ProductForm = ({ sendForm, editdata }) => {
                                     type="text" />
                             </div>
 
-                            <button>Add</button>
+                            <div className='d-flex justify-content-end'>
+                                <button>{editdata ? "Edit" : "Add"}</button>
+                            </div>
                         </form>
                     </div>
                 </div>

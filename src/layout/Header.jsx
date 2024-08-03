@@ -45,36 +45,9 @@ const Header = () => {
         window.location.reload();
     }
 
-    const dash = () =>{
+    const dash = () => {
         navigate('/dashboard')
     }
-
-    // const isExcludedPath = () => {
-    //     const excludedPaths = [
-    //         "/404",
-    //         "/login",
-    //         "/register",
-    //         "/reset_password",
-    //         "/dashboard",
-    //         "/dashboard/users",
-    //         "/dashboard/add"
-    //     ];
-
-    //     if (excludedPaths.includes(pathname)) {
-    //         return true;
-    //     }
-
-    //     const dynamicPaths = [
-    //         /^\/dashboard\/edit\/[^/]+$/
-    //     ];
-
-    //     return dynamicPaths.some((pattern) => pattern.test(pathname));
-    // };
-
-    // if (isExcludedPath()) {
-    //     return null;
-    // }
-
 
 
     const isExcludedPath = useCallback(() => {
@@ -102,6 +75,7 @@ const Header = () => {
     const [search, setSearch] = useState("");
 
     const [showOptions, setShowOptions] = useState(false);
+    
     const wrapperRef = useRef(null);
 
     const handleClickOutside = event => {
@@ -172,7 +146,7 @@ const Header = () => {
                                             setShowOptions(e.target.value !== "");
                                         }}
                                         type="text"
-                                        placeholder='Enter Your Keyword'
+                                        placeholder={t("header.7")}
                                         value={search}
                                     />
                                 </div>
@@ -181,7 +155,7 @@ const Header = () => {
                                         <div className='search_options'>
                                             {
                                                 filteredData.length === 0 ?
-                                                    <div>Product not found</div> :
+                                                    <div>{t("header.8")}</div> :
                                                     filteredData.map(item => (
                                                         <div key={item.id}>
                                                             <Link to={`/shop/${slugify(item.title)}`}>{item.title}</Link>
@@ -252,8 +226,8 @@ const Header = () => {
                                             <p>admin@gmail.com</p>
                                         </div>
                                         <li><Link className="dropdown-item" to={'/account'}>Account</Link></li>
-                                        <li><button onClick={dash} className="dropdown-item">Dashboard</button></li>
-                                        <li><button onClick={logout} className="dropdown-item logout">Log out</button></li>
+                                        <li><button onClick={dash} className="dropdown-item">{t("header.9")}</button></li>
+                                        <li><button onClick={logout} className="dropdown-item logout">{t("header.10")}</button></li>
                                     </ul>
                                 </div> : localStorage.getItem('login') === 'true' ? <div className="dropdown">
                                     <a className="icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -265,7 +239,7 @@ const Header = () => {
                                             <p>{localStorage.getItem('email')}</p>
                                         </div>
                                         <li><Link className="dropdown-item" to={'/account'}>Account</Link></li>
-                                        <li><button onClick={logout} className="dropdown-item logout">Log out</button></li>
+                                        <li><button onClick={logout} className="dropdown-item logout">{t("header.10")}</button></li>
                                     </ul>
                                 </div> : <Link to='/login' className='icon'>
                                     <AiOutlineUser />
@@ -279,13 +253,13 @@ const Header = () => {
                                         <FaBasketShopping className='fs-2' />
                                         <span className='position-absolute top-0 translate-middle badge rounded-pill'> {totalItems}</span>
                                     </div>
-                                    <h6 className="offcanvas-title" id="offcanvasRightLabel">{t("header.7")}</h6>
+                                    <h6 className="offcanvas-title" id="offcanvasRightLabel">{t("header.11")}</h6>
                                 </div>
                                 <div className="offcanvas-body">
                                     {items.map(item => (
                                         <div className='basket' key={item.id}>
                                             <div className='d-flex justify-content-between align-items-center shop-cards mb-3'>
-                                                <div><img width={100} src={item.front_img} alt={item.title} /></div>
+                                                <div><img width={70} src={item.frontImg} alt={item.title} /></div>
                                                 <div>
                                                     <NavLink to={`/shop/${slugify(item.title)}`}>{item.title}</NavLink>
                                                     <span>{item.quantity} x <b>${item.price}</b></span>
@@ -297,13 +271,13 @@ const Header = () => {
                                 </div>
                                 <div className='basket_subtotal p-3'>
                                     <div className='d-flex justify-content-between'>
-                                        <p>SUBTOTAL:</p>
+                                        <p>{t("header.12")}:</p>
                                         <span>${cartTotal}</span>
                                     </div>
 
                                     <div className='basket_footer'>
-                                        <Link to="/basket" className='view_cart'>VIEW CART</Link>
-                                        <Link className='cart_check'>CHECKOUT</Link>
+                                        <Link to="/basket" className='view_cart'>{t("header.13")}</Link>
+                                        <Link to='/checkout' className='cart_check'>{t("header.14")}</Link>
                                     </div>
                                 </div>
                             </div>
@@ -355,17 +329,17 @@ const Header = () => {
                             </div>
                             <div className="offcanvas-body">
                                 <ul className='d-block'>
-                                    <NavLink to="/" className='nav-link d-block d-flex justify-content-between align-items-center' activeclassname="active">Home<GoChevronRight /></NavLink>
-                                    <NavLink to="/about" className='nav-link d-flex justify-content-between align-items-center'>About<GoChevronRight /></NavLink>
-                                    <NavLink to="/shop" className='nav-link d-flex justify-content-between align-items-center'>Shop<GoChevronRight /></NavLink>
-                                    <NavLink to="/blog" className='nav-link d-flex justify-content-between align-items-center'>Blog<GoChevronRight /></NavLink>
-                                    <NavLink to="/contact" className='nav-link d-flex justify-content-between align-items-center'>Contact<GoChevronRight /></NavLink>
+                                    <NavLink to="/" className='nav-link d-block d-flex justify-content-between align-items-center' activeclassname="active">{t("header.0")}<GoChevronRight /></NavLink>
+                                    <NavLink to="/about" className='nav-link d-flex justify-content-between align-items-center'>{t("header.1")}<GoChevronRight /></NavLink>
+                                    <NavLink to="/shop" className='nav-link d-flex justify-content-between align-items-center'>{t("header.2")}<GoChevronRight /></NavLink>
+                                    <NavLink to="/blog" className='nav-link d-flex justify-content-between align-items-center'>{t("header.3")}<GoChevronRight /></NavLink>
+                                    <NavLink to="/contact" className='nav-link d-flex justify-content-between align-items-center'>{t("header.4")}<GoChevronRight /></NavLink>
                                 </ul>
                             </div>
 
                             <div className='nav_footer p-4'>
-                                <div><p><span>Email:</span> +0123-456-789</p></div>
-                                <div className='pt-2'><p><span>Call Us:</span> example@domain.com</p></div>
+                                <div><p><span>{t("header.5")}:</span> +0123-456-789</p></div>
+                                <div className='pt-2'><p><span>{t("header.6")}:</span> example@domain.com</p></div>
                                 <div className='d-flex gap-3 pt-3'>
                                     <div className='icons'><FaFacebookF /></div>
                                     <div className='icons'><FaTwitter /></div>

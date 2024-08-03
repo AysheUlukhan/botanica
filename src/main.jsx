@@ -16,11 +16,6 @@ import supabase from './config/connectdb.js';
 
 const store = shopStore();
 
-// store.subscribe(() => {
-//   console.log(store.getState());
-// })
-
-
 const fetchData = async () => {
   const { data, error } = await supabase.from('product').select()
 

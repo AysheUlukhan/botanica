@@ -9,7 +9,6 @@ import bee2 from '../../assets/images/bee2.webp';
 import hero_dark_img from '../../assets/images/hero_dark_img.png'
 import dark_honey2 from '../../assets/images/dark_honey2.png'
 import dark_honey3 from '../../assets/images/dark_honey3.webp'
-// // motion
 import { motion } from 'framer-motion';
 import PBenefit from './components/ProductBenefit';
 import FCategory from './components/FeatureCategory/FCategory';
@@ -19,9 +18,10 @@ import Brand from './components/Brand';
 import { ModeContext } from '../../context/ModeContext';
 import { TypeAnimation } from 'react-type-animation';
 import Typewriter from 'typewriter-effect';
+import { useTranslation } from 'react-i18next';
 const Home = () => {
   const [mode] = useContext(ModeContext);
-
+  const { t } = useTranslation();
   return (
     <>
       <div className='home'>
@@ -40,16 +40,7 @@ const Home = () => {
                 exit={{ opacity: 0, y: '-10%' }}
                 transition={{ duration: 1.2 }}
                 className='col-lg-4 col-md-4 col-sm-12 hero_content'>
-                {/* <TypeAnimation
-                  sequence={[
-                    "Fresh Organic"
-                  ]}
-                  speed={50}
-                  repeat={Infinity}
-                /> */}
-
-
-
+              
 
                 <h5 className="mb-3">
                   <Typewriter
@@ -57,13 +48,13 @@ const Home = () => {
                       autoStart: true,
                       loop: true,
                       delay: 50,
-                      strings: "Fresh Organic"
+                      strings: [t("home.0")]
                     }}
                   />
                 </h5>
-                <h3>Mint Blossom <br /> Honey</h3>
+                <h3>{t("home.1")} <br /> {t("home.2")}</h3>
                 <div className="pt-5">
-                  <Link to='shop'>SHOP NOW</Link>
+                  <Link to='shop'>{t("home.3")}</Link>
                 </div>
               </motion.div>
 

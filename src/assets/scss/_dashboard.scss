@@ -1,5 +1,5 @@
 .dash_sidebar{
-    background-color: #0F0F0F;
+    background-color: #5B2800;
     color: white;
     height: 100vh;
     transition: all 0.5s;
@@ -9,16 +9,18 @@
         .top_section{
             display: flex;
             align-items: center;
+            justify-content: space-between;
             padding: 20px 15px;
 
             .dash_logo{
-                font-size: 30px;
+                font-size: 22px;
+                font-weight: 500;
             }
 
             .bars{
                 display: flex;
-                font-size: 25px;
-                margin-left: 50px;
+                font-size: 23px;
+                // margin-left: 40px;
 
                 &:hover{
                     cursor: pointer;
@@ -37,18 +39,19 @@
             &:hover{
                 background-color: #FABE17;
             }
+            &:active{
+                background-color: #FABE17;
+            }
         }
 
-        // .active{
-        //     background-color: #FABE17;
-        // }
 
         .icon{
             font-size: 18px;
         }
 
         .link-text{
-            font-size: 18px;
+            font-size: 16px;
+            font-weight: 500;
         }
     }
 }
@@ -64,6 +67,45 @@
         .table_bimg{
             width: 70px;
         }
+    }
+
+    .add-btn{
+       display: flex;
+       justify-content: end;
+       a{
+        background-color: #5B2800;
+        color: white;
+        padding: 5px 20px;
+        font-size: 14px;
+        border-radius: 5px;
+       }
+    }
+
+    table{
+        thead{
+            tr{
+                th{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .btn-edit{
+        background-color: #5B2800;
+        color: white;
+        padding: 5px 20px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .btn-delete{
+        background-color: #FABE17;
+        color: white;
+        padding: 5px 20px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
     }
 }
 

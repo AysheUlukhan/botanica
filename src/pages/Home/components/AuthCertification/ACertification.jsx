@@ -11,8 +11,10 @@ import {
 } from "swiper/modules";
 import 'swiper/css';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const ACertification = () => {
+    const { t } = useTranslation();
     return (
         <div className='auth_certification pt-5'>
             <div className="container">
@@ -25,9 +27,9 @@ const ACertification = () => {
                         transition={{ duration: 1.2 }}
                         className="col-lg-6 pt-lg-5">
                         <div>
-                            <h6>True Source Certified</h6>
-                            <h3>Authenticity Certification</h3>
-                            <p>True Source Honey certification confirms that honey was sourced in a transparent manner and tested for authenticity. When consumers buy honey or honey containing products bearing the True Source.</p>
+                            <h6>{t("acertification.0")}</h6>
+                            <h3>{t("acertification.1")}</h3>
+                            <p>{t("acertification.2")}</p>
 
                             <div>
                                 <Swiper

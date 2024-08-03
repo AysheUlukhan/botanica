@@ -12,16 +12,17 @@
   import {shopData} from '../../../../api/shopData'
 import { useSelector } from 'react-redux';
 import img_title from '../../../../assets/images/icon-title.webp'
+import { useTranslation } from 'react-i18next';
   const OurProduct = () => {
     const data = useSelector(p=>p)
-    
+    const { t } = useTranslation();
     return (
       <div className='our_product mt-5'>
         <div className='container pt-5'>
           <div className="row">
             <div className='text-center'>
             <img src={img_title} alt="" />
-              <h3>Our Products</h3>
+              <h3>{t("ourproduct.0")}</h3>
             </div>
             <Swiper
               grabCursor={true}
@@ -69,7 +70,7 @@ import img_title from '../../../../assets/images/icon-title.webp'
           </div>
 
           <div className='d-flex justify-content-center py-5'>
-            <Link className='btn-all'>ALL PRODUCTS</Link>
+            <Link className='btn-all'>{t("ourproduct.1")}</Link>
           </div>
         </div>
       </div>

@@ -58,7 +58,7 @@ const Wishlist = () => {
                         <FaRegTrashCan className='wish_trash_icon' onClick={() => { removeWishlistItem(item.id) }} />
                       </div>
                       <div className='d-flex gap-4 align-items-center'>
-                        <Link to={`/shop/${slugify(item.title)}`}><img width={100} src={item.front_img} alt={item.title} /></Link>
+                        <Link to={`/shop/${slugify(item.title)}`}><img width={70} src={item.frontImg} alt={item.title} /></Link>
                         <div>
                           <Link to={`/shop/${slugify(item.title)}`} className='wish_title'>{item.title}</Link>
                           <p className='mt-3 wish_price'>${item.price}</p>
